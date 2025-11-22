@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
-import { User as UserIcon, Mail, Shield, Calendar } from 'lucide-react';
-import { format } from 'date-fns';
+import { User as UserIcon, Mail, Shield } from 'lucide-react';
+// import { format } from 'date-fns';
 
 const Profile: React.FC = () => {
   const { user } = useAuth();
@@ -60,13 +60,13 @@ const Profile: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-3">
+            {/* <div className="flex items-start space-x-3">
               <Calendar className="text-gray-400 mt-1" size={20} />
               <div>
                 <p className="text-sm font-medium text-gray-700">Member Since</p>
                 <p className="text-gray-900">{format(new Date(user.createdAt), 'MMM dd, yyyy')}</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
